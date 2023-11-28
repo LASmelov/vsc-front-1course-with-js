@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+
+</head>
+
+<body>
+    <header>
+
+        <nav class="nav">
+            <a href="#">Личный кабинет</a>
+        </nav>
+
+        <div class="logo">
+            <img src="assets/img/logo.whitePNG">
+        </div>
+
+        <!-- <nav class="nav1">
+            <a href="#">Заказы</a>
+            <a href="#">Корзина</a>
+        </nav> -->
+
+        <button class="btn" data-path="form-popup">
+            <a>Заказы</a>
+        </button>
+        <button class="btn" data-path="me-popup">
+            <a>Корзина</a>
+        </button>
+
+
+        <div class="modals">
+            <div class="modal-overlay">
+                <div class="modal modal--1" data-target="form-popup">
+                    Ваши заказы пусты
+                </div>
+                <div class="modal modal--2" data-target="me-popup">
+                    Ваша корзина пуста
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const btns = document.querySelectorAll('.btn');
+            const modalOverlay = document.querySelector('.modal-overlay ');
+            const modals = document.querySelectorAll('.modal');
+
+            btns.forEach((el) => {
+                el.addEventListener('click', (e) => {
+                    let path = e.currentTarget.getAttribute('data-path');
+
+                    modals.forEach((el) => {
+                        el.classList.remove('modal--visible');
+                    });
+
+                    document.querySelector(`[data-target="${path}"]`).classList.add('modal--visible');
+                    modalOverlay.classList.add('modal-overlay--visible');
+                });
+            });
+
+            modalOverlay.addEventListener('click', (e) => {
+                console.log(e.target);
+
+                if (e.target == modalOverlay) {
+                    modalOverlay.classList.remove('modal-overlay--visible');
+                    modals.forEach((el) => {
+                        el.classList.remove('modal--visible');
+                    });
+                }
+            });
+        </script>
+    </header>
+    <main>
+
+
+        <section class="second_section">
+            <div class="moto">
+                <a href="index2.html"> <img src="assets/img/moto1.1.jpg">
+                    <p>ЭНДУРО</p>
+                </a>
+
+            </div>
+            <div class="moto">
+                <a href="#"><img src="assets/img/moto2.1.jpg">
+                    <p>КРОСС</p>
+                </a>
+
+            </div>
+            <div class="moto">
+                <a href="#"><img src="assets/img/moto3.1.jpg">
+                    <p>ПИТБАЙКИ</p>
+                </a>
+
+            </div>
+            <div class="moto">
+                <a href="#"><img src="assets/img/moto4.1.jpg">
+                    <p>СУПЕРМОТО</p>
+                </a>
+
+            </div>
+            <div class="moto">
+                <a href="#"><img src="assets/img/moto5.1.jpg">
+                    <p>ТУРЭНДУРО</p>
+                </a>
+
+            </div>
+            <div class="moto">
+                <a href="#"><img src="assets/img/moto6.1.jpg">
+                    <p>ДОРОЖНЫЕ</p>
+                </a>
+
+            </div>
+        </section>
+
+        <div class="rec">Мы рекомендуем </div>
+        <section class="third_section">
+
+            <div class="rec1">
+                <img src="assets/img/rec1.1.jpg"><br>
+                <a>2012 Honda CRF250</a>
+                <br><br>
+                <h7><s>560 800 рублей</s></h7>
+                <a>510 250 рублей</a>
+
+            </div>
+
+            <div class="rec2">
+                <img src="assets/img/rec2.1.jpg"><br>
+                <a>2019 KTM 350SXF</a>
+                <br><br>
+                <h7><s>589 432 рублей</s></h7>
+                <a>520 644 рублей</a>
+
+            </div>
+
+        </section>
+        <section class="fourt_section">
+            <div class="icon">
+
+                <button class="accordion">
+                    <img src="assets/img/icon1.png">
+                    Итернет-магазин MotobazA</button>
+                <div class="panel">
+                    <p>В каталоге представлен большой выбор товаров. На все мотоциклы<br>
+                        действует гарантия от произодителя. Выбирайте понравившуюся <br>
+                        модель на сайте из широкого ассортимента по фото, цене, <br>характеристикам с помощью удобного
+                        фильтра. </p>
+                </div>
+                <!-- <h3>Итернет-магазин MotobazA</h3>
+                <h4>В каталоге представлен большой выбор товаров. На все мотоциклы<br>
+                    действует гарантия от произодителя. Выбирайте понравившуюся <br>
+                    модель на сайте из широкого ассортимента по фото, цене, <br>характеристикам с помощью удобного
+                    фильтра. </h4><br> -->
+            </div>
+
+
+            <div class="icon">
+
+
+                <button class="accordion">
+                    <img src="assets/img/icon2.png">
+                    Скидки, акции, распродажи</button>
+                <div class="panel">
+                    <p>В нашем магазине постоянно проводятся распродажи: вы можете <br>
+                        приобрести дешево мотоциклы со скидкой по выгодной цене, если<br>
+                        на эту модель сейчас действует акция. </p>
+                </div>
+
+                <!-- <h3>Скидки, акции, распродажи,</h3>
+                <h4>В нашем магазине постоянно проводятся распродажи: вы можете <br>
+                    приобрести дешево мотоциклы со скидкой по выгодной цене, если<br>
+                    на эту модель сейчас действует акция.</h4><br> -->
+
+            </div>
+            <div class="icon">
+
+
+
+
+                <button class="accordion">
+                    <img src="assets/img/icon3.png">
+                    Как заказать</button>
+                <div class="panel">
+                    <p>Чтобы заказать мотоциклы у нас, вы можете оформить заказ на сайте<br>
+                        или позвоните по телефону и наши менеджеры примут заказ. Если вы <br>
+                        хотите выбрать мотоциклы в нашем магазине, то уточняйте адрес<br>
+                        ближайшего к вам магазина и приходите - наши специалисты вас <br>
+                        проконсультируют и помогут с выбором. </p>
+                </div>
+
+                <!-- <h3>Как заказать </h3>
+                <h4>Чтобы заказать мотоциклы у нас, вы можете оформить заказ на сайте<br>
+                    или позвоните по телефону и наши менеджеры примут заказ. Если вы <br>
+                    хотите выбрать мотоциклы в нашем магазине, то уточняйте адрес<br>
+                    ближайшего к вам магазина и приходите - наши специалисты вас <br>
+                    проконсультируют и помогут с выбором.
+                </h4> -->
+            </div>
+
+            <script>var acc = document.getElementsByClassName("accordion");
+                var i;
+
+                for (i = 0; i < acc.length; i++) {
+                    acc[i].addEventListener("click", function () {
+                        this.classList.toggle("active");
+                        var panel = this.nextElementSibling;
+                        if (panel.style.display === "block") {
+                            panel.style.display = "none";
+                        } else {
+                            panel.style.display = "block";
+                        }
+                    });
+                }</script>
+            </div>
+        </section>
+    </main>
+</body>
+<footer>
+    <div class="logo1">
+        <img src="assets/img/logo.png"><br>
+
+    </div>
+    <section class="fot1">
+        <div class="fot">
+            <img src="assets/img/fot1.png">
+            <img src="assets/img/fot2.png">
+            <img src="assets/img/fot3.png">
+            <img src="assets/img/fot4.png">
+
+        </div>
+    </section>
+</footer>
+
+</html>

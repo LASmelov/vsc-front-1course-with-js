@@ -1,0 +1,242 @@
+header {
+  background-color: rgba(177, 172, 255, 0.486);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.logo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.logo a img {
+  width: 20%;
+}
+
+.nav1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  padding-right: 5px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.nav1 a {
+  font-size: 12px;
+  color: black;
+  font-weight: 700;
+  padding: 4px;
+  border: 1px solid black;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+  text-decoration: none;
+}
+
+.nav1 a:hover {
+  font-size: 13px;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  padding-left: 5px;
+}
+
+.nav b {
+  font-size: 12px;
+  color: black;
+  font-weight: 700;
+  padding: 4px;
+  border: 1px solid black;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+  text-decoration: none;
+}
+
+.nav b:hover {
+  font-size: 13px;
+}
+
+.first_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border-top: 2px solid black;
+}
+
+.poisk1 {
+  font-weight: 700;
+  font-size: 15px;
+  padding-bottom: 20px;
+}
+
+.poisk2 {
+  font-size: 15px;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+.second_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.moto {
+  width: 40%;
+}
+
+.moto img {
+  width: 100%;
+  border: 1px solid black;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  background-color: rgba(177, 172, 255, 0.486);
+  border-top: 2px solid black;
+  padding-left: 2%;
+}
+
+.logo1 img {
+  width: 150px;
+}
+
+h9 {
+  font-size: 8px;
+  color: black;
+  font-weight: 800;
+  padding-top: 5px;
+}
+
+.fot img {
+  width: 23px;
+  padding-left: 13px;
+  padding-top: 8px;
+}
+
+@media (max-width: 500px) {
+  .logo a img {
+    width: 70%;
+  }
+  .nav1 {
+    -webkit-column-gap: 5px;
+       -moz-column-gap: 5px;
+            column-gap: 5px;
+    padding-right: 0px;
+  }
+  .nav1 a {
+    font-size: 9px;
+    color: black;
+    font-weight: 700;
+    padding: 1px;
+    border: 1px solid black;
+    -webkit-transition: 0.3s linear;
+    transition: 0.3s linear;
+  }
+  .nav1 a:hover {
+    font-size: 8px;
+  }
+  .nav a {
+    -webkit-column-gap: 5px;
+       -moz-column-gap: 5px;
+            column-gap: 5px;
+    padding-left: 0px;
+    font-size: 9px;
+  }
+  .nav a:hover {
+    font-size: 9px;
+  }
+  .poisk1 {
+    font-size: 15px;
+    padding-bottom: 5px;
+  }
+  .poisk2 {
+    font-size: 15px;
+    padding-bottom: 10px;
+  }
+  .second_section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .moto {
+    width: 95%;
+  }
+  .moto img {
+    width: 100%;
+    padding-left: 5%;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: rgba(177, 172, 255, 0.486);
+    border-top: 2px solid black;
+    padding-left: 2%;
+  }
+  .logo1 img {
+    width: 90px;
+  }
+  h9 {
+    font-size: 6px;
+    padding-top: 5px;
+  }
+  .fot img {
+    width: 22px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}/*# sourceMappingURL=style2.css.map */

@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    background-color: black;
+    font-family: "Unbounded", cursive;
+  }
+  
+  .logo a {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 25px;
+  }
+  
+  .logo img {
+    width: 20%;
+  }
+  
+  .btn{
+
+  
+    display: flex;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    padding-right: 5px;
+    white-space: nowrap;
+  background-color: black;
+  border: none;
+    
+  }
+  
+  .btn a:hover {
+    color: rgba(0, 193, 207, 0.61)
+  }
+  
+  .btn a{
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    padding: 4px;
+    padding-top: 15px;
+    transition: 0.3s linear;
+    text-decoration: none;
+  }
+  
+  .modal-overlay {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    right: 0;
+    bottom: 0; 
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+    width: 100%; 
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    
+  }
+  
+  .modal {
+    background-color: rgb(0, 193, 207);
+    width: 300px;
+    margin: 10px; 
+    position: absolute;
+    border-radius: 10px;
+    
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    display: none;
+    
+  }
+  
+  .modal-overlay--visible {
+   
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease-in-out;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    
+  }
+  
+  .modal--visible {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  } 
+  
+  .nav a {
+    display: flex;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    padding-left: 5px;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    padding: 4px;
+    padding-top: 25px;
+    transition: 0.3s linear;
+    text-decoration: none;
+    font-family: "Unbounded", cursive;
+  }
+  
+  .nav a:hover {
+    color: rgba(0, 193, 207, 0.61);
+  }
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.container{
+    min-height: 100vh;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-bottom: 60px;
+}
+
+.container form{
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+    padding: 20px;
+    width: 600px;
+    padding-top: 160px;
+}
+
+.container form .inputBox{
+    margin-top: 20px;
+}
+
+.container form .inputBox span{
+    display: block;
+    color:#999;
+    padding-bottom: 5px;
+}
+
+.container form .inputBox input,
+.container form .inputBox select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border:1px solid rgba(0,0,0,.3);
+    color:#444;
+}
+
+.container form .flexbox{
+    display: flex;
+    gap:15px;
+}
+
+.container form .flexbox .inputBox{
+    flex:1 1 150px;
+}
+
+.container form .submit-btn{
+    width: 100%;
+    background:linear-gradient(45deg, rgba(0, 193, 207, 0.61), rgba(205, 214, 214, 0.61));
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+    color:#fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.container form .submit-btn:hover{
+    letter-spacing: 2px;
+    opacity: .8;
+}
+
+.container .card-container{
+    margin-bottom: -150px;
+    position: relative;
+    height: 250px;
+    width: 400px;
+}
+
+.container .card-container .front{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0; left: 0;
+    background:linear-gradient(45deg, rgba(0, 193, 207, 0.61), rgba(205, 214, 214, 0.61));
+    border-radius: 5px;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    padding:20px;
+    transform:perspective(1000px) rotateY(0deg);
+    transition:transform .4s ease-out;
+}
+
+.container .card-container .front .image{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.container .card-container .front .image img{
+    height: 50px;
+}
+
+.container .card-container .front .card-number-box{
+    padding:30px 0;
+    font-size: 22px;
+    color:#fff;
+}
+
+.container .card-container .front .flexbox{
+    display: flex;
+}
+
+.container .card-container .front .flexbox .box:nth-child(1){
+    margin-right: auto;
+}
+
+.container .card-container .front .flexbox .box{
+    font-size: 15px;
+    color:#fff;
+}
+
+.container .card-container .back{
+    position: absolute;
+    top:0; left: 0;
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(45deg, rgba(0, 193, 207, 0.61), rgba(205, 214, 214, 0.61));
+    border-radius: 5px;
+    padding: 20px 0;
+    text-align: right;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    transform:perspective(1000px) rotateY(180deg);
+    transition:transform .4s ease-out;
+}
+
+.container .card-container .back .stripe{
+    background: #000;
+    width: 100%;
+    margin: 10px 0;
+    height: 50px;
+}
+
+.container .card-container .back .box{
+    padding: 0 20px;
+}
+
+.container .card-container .back .box span{
+    color:#fff;
+    font-size: 15px;
+}
+
+.container .card-container .back .box .cvv-box{
+    height: 50px;
+    padding: 10px;
+    margin-top: 5px;
+    color:#333;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.container .card-container .back .box img{
+    margin-top: 30px;
+    height: 30px;
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    height: 50px;
+    background: linear-gradient(to top, rgba(0, 193, 207, 0.61), #ffffff);
+    padding-left: 2%;
+    font-family: "Unbounded", cursive;
+  }
+  
+  .logo1 img {
+    width: 150px;
+  }
+  
+  h9 {
+    font-size: 8px;
+    color: black;
+    font-weight: 800;
+    padding-top: 5px;
+    font-family: "Unbounded", cursive;
+  }
+  
+  .fot img {
+    width: 23px;
+    padding-left: 13px;
+    padding-top: 8px;
+  }

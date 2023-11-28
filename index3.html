@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets3/css3/style3.css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="nav">
+            <a href="#">Личный кабинет</a>
+        </nav>
+
+        <div class="logo">
+            <a href="index.html"> <img src="assets/img/logo.whitePNG"></a>
+        </div>
+
+        <button class="btn" data-path="form-popup">
+            <a>Заказы</a>
+        </button>
+        <button class="btn" data-path="me-popup">
+            <a>Корзина</a>
+        </button>
+
+
+        <div class="modals">
+            <div class="modal-overlay">
+                <div class="modal modal--1" data-target="form-popup">
+                    Ваши заказы пусты
+                </div>
+                <div class="modal modal--2" data-target="me-popup">
+                    Ваша корзина пуста
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const btns = document.querySelectorAll('.btn');
+            const modalOverlay = document.querySelector('.modal-overlay ');
+            const modals = document.querySelectorAll('.modal');
+
+            btns.forEach((el) => {
+                el.addEventListener('click', (e) => {
+                    let path = e.currentTarget.getAttribute('data-path');
+
+                    modals.forEach((el) => {
+                        el.classList.remove('modal--visible');
+                    });
+
+                    document.querySelector(`[data-target="${path}"]`).classList.add('modal--visible');
+                    modalOverlay.classList.add('modal-overlay--visible');
+                });
+            });
+
+            modalOverlay.addEventListener('click', (e) => {
+                console.log(e.target);
+
+                if (e.target == modalOverlay) {
+                    modalOverlay.classList.remove('modal-overlay--visible');
+                    modals.forEach((el) => {
+                        el.classList.remove('modal--visible');
+                    });
+                }
+            });
+        </script>
+    </header>
+
+    <section class="first_section">
+        <div class="first_text">
+            <h1>KAWASAKI KLX450R ЗЕЛЕНЫЙ 2019</h1>
+        </div>
+    </section>
+    <section class="second_section">
+        <ul class="images">
+            <li><img src="assets3/img3/moto3.jpg" alt=""></li>
+            <li><img src="assets3/img3/moto2.jpg" alt=""></li>
+            <li><img src="assets3/img3/moto1.jpg" alt=""></li>
+            <li><img src="assets3/img3/moto4.jpg" alt=""></li>
+            <li><img src="assets3/img3/moto5.jpg" alt=""></li>
+        </ul>
+        <div class="things1">
+            <h2>Описание</h2>
+            <h3>Фанаты эндуро, которые ценят четырехтактные <br>
+                внедорожные мотоциклы, обязательно обратят<br>
+                внимание на обновленный KLX450R. Мощность,<br>
+                отличные технические характеристики и<br>
+                великолепная управляемость, а также электрозапуск<br>
+                идеально подходят для эндуро-приключений.</h3><br>
+            <h2>Коротко о товаре</h2>
+
+
+            <h3>Объем 449 см³<br>
+                Трансмиссия 5-передач<br>
+                Колесная база 1.480 мм<br>
+                Клиренс 315 мм<br>
+                Высота по седлу 935 мм<br>
+                Емкость топливного бака 8 литров<br>
+                Снаряжённая масса 126 kg<br>
+            </h3>
+        </div>
+        <div class="price1">
+            <h5>669000 ₽</h5>
+            <h3>Доставка до 15 рабочих дней</h3>
+            <div class="price2">
+                <a href="#">Добавить в корзину</a>
+                <a href="index4.html">Оформить заказ</a>
+            </div>
+        </div>
+
+    </section>
+    <div class="features">
+        <h2>КЛЮЧЕВЫЕ ОСОБЕННОСТИ</h2>
+    </div>
+    <section class="third_section">
+
+        <div class="motob1">
+            <div class="moto1">
+                <img src="assets3/img3/op1.jpg">
+                <h2>Цифровой спидометр</h2>
+            </div>
+            <h3>KLX450R оснащен цифровым дисплеем, который позволяет гонщику легко читать информацию о мотоцикле в
+                реальном времени. Легкое цифровое устройство включает в себя спидометр, два счетчика пройденного
+                пути, одометр и часы.</h3>
+        </div>
+        <div class="motob1">
+            <div class="moto1">
+                <img src="assets3/img3/op2.jpg">
+                <h2>Дисковые тормоза</h2>
+            </div>
+            <h3>Благодаря лепестковыми дисковым тормозам, тормозные колодки всегда будут оставаться чистыми, а
+                тормоза эффективными. Круг за кругом.</h3>
+        </div>
+        <div class="motob1">
+            <div class="moto1">
+                <img src="assets3/img3/op3.jpg">
+                <h2>Светодиодный задний фонарь</h2>
+            </div>
+            <h3>KLX450R оснащен задним светодиодным фонарем, чтобы гонщики могли лучше контролировать дистанцию
+                между мотоциклами</h3>
+        </div>
+        <div class="motob1">
+            <div class="moto1">
+                <img src="assets3/img3/op4.jpg">
+                <h2>Электростартер</h2>
+            </div>
+            <h3>Оснащение мотоцикла электростартером стало одним из самых существенных изменений в KLX450R. Наличие
+                электростартера и кикстартера позволяет легко запустить двигатель перед поездкой и если он заглох
+                при преодолении препятствий. </h3>
+        </div>
+
+        <section class="map">
+            <div class="motomap">
+                <script type="text/javascript" charset="utf-8" async
+                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab15db7d02dbf03f52710142e371a1ec0f842f1de1750e4860689975358d2e1e6&amp;width=1280&amp;height=371&amp;lang=ru_RU&amp;scroll=true">
+                    </script>
+            </div>
+        </section>
+
+    </section>
+    </main>
+    <footer>
+        <div class="logo1">
+            <img src="assets/img/logo.png"><br>
+
+
+        </div>
+        <div class="fot">
+            <img src="assets/img/fot1.png">
+            <img src="assets/img/fot2.png">
+            <img src="assets/img/fot3.png">
+            <img src="assets/img/fot4.png">
+        </div>
+    </footer>
+
+</body>
+
+
+</html>

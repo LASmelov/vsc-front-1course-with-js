@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets2/css2/style2.css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="nav">
+            <a href="#">Личный кабинет</a>
+        </nav>
+
+        <div class="logo">
+            <a href="index.html"> <img src="assets/img/logo.whitePNG"></a>
+        </div>
+
+        <button class="btn" data-path="form-popup">
+            <a>Заказы</a>
+        </button>
+        <button class="btn" data-path="me-popup">
+            <a>Корзина</a>
+        </button>
+
+
+        <div class="modals">
+            <div class="modal-overlay">
+                <div class="modal modal--1" data-target="form-popup">
+                    Ваши заказы пусты
+                </div>
+                <div class="modal modal--2" data-target="me-popup">
+                    Ваша корзина пуста
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const btns = document.querySelectorAll('.btn');
+            const modalOverlay = document.querySelector('.modal-overlay ');
+            const modals = document.querySelectorAll('.modal');
+
+            btns.forEach((el) => {
+                el.addEventListener('click', (e) => {
+                    let path = e.currentTarget.getAttribute('data-path');
+
+                    modals.forEach((el) => {
+                        el.classList.remove('modal--visible');
+                    });
+
+                    document.querySelector(`[data-target="${path}"]`).classList.add('modal--visible');
+                    modalOverlay.classList.add('modal-overlay--visible');
+                });
+            });
+
+            modalOverlay.addEventListener('click', (e) => {
+                console.log(e.target);
+
+                if (e.target == modalOverlay) {
+                    modalOverlay.classList.remove('modal-overlay--visible');
+                    modals.forEach((el) => {
+                        el.classList.remove('modal--visible');
+                    });
+                }
+            });
+        </script>
+    </header>
+    <main>
+        <section class="first_section">
+            <form>
+                <select class="select-css">
+
+                    <br>
+                    <option>Сортировать по:</option>
+                    <option value="" selected> Популярности
+                    <option value=""> Цене(меньше)
+                    <option value=""> Цене(больше)
+                    <option value=""> Объему(меньше)
+                    <option value=""> Объему(больше)
+                </select>
+
+
+                <select class="select-css">
+                    <option>Класс мотоцикла:</option>
+                    <option value="" selected> Турэндуро
+                    <option value=""> Кросс
+                    <option value=""> Питбайки
+                    <option value=""> Супермото
+                    <option value=""> Эндуро
+                    <option value=""> Дорожные
+                </select>
+                </div>
+            </form>
+        </section>
+
+        <section class="second_section">
+            <!-- <div class="container"> -->
+            <div class="card">
+                <div class="card-item">
+                    <div class="card-item-text">
+
+                        <div class="moto">
+                            <a href="index3.html"><img src="assets2/img2/moto1.jpg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="second_text">
+                    <h2> KAWASAKI KLX450R ЗЕЛЕНЫЙ 2019 <br><br> 669000 рублей </h2>
+                </div>
+                <nav class="c">
+                    <h1>
+                        <a href="index3.html"> Перейти </a>
+                    </h1>
+                </nav>
+            </div>
+
+
+            <div class="card">
+                <div class="card-item">
+                    <div class="card-item-text">
+                        <div class="moto">
+                            <a href=""> <img src="assets2/img2/moto2.jpg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="second_text">
+                    <h2> 2006 KTM 950 СУПЕР ЭНДУРО R <br><br> 790 000 рублей </h2>
+                </div>
+                <nav class="c">
+                    <h1>
+                        <a href=""> Перейти </a>
+                    </h1>
+                </nav>
+            </div>
+
+
+            <div class="card">
+                <div class="card-item">
+                    <div class="card-item-text">
+                        <div class="moto">
+                            <a href=""> <img src="assets2/img2/moto3.jpg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="second_text">
+                    <h2> Мотоцикл эндуро GASGAS EC 300 <br><br> 1 015 900 рублей</h2>
+                </div>
+                <nav class="c">
+                    <h1>
+                        <a href=""> Перейти </a>
+                    </h1>
+                </nav>
+            </div>
+
+
+            <div class="card">
+                <div class="card-item">
+                    <div class="card-item-text">
+                        <div class="moto">
+                            <a href=""><img src="assets2/img2/moto4.jpg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="second_text">
+                    <h2> HUSQVARNA FE350 2023<br><br> 899 900 рублей </h2>
+                </div>
+                <nav class="c">
+                    <h1>
+                        <a href=""> Перейти </a>
+                    </h1>
+                </nav>
+            </div>
+
+
+            <div class="card">
+                <div class="card-item">
+                    <div class="card-item-text">
+                        <div class="moto">
+                            <a href=""> <img src="assets2/img2/moto5.jpeg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="second_text">
+                    <h2> 2012 Honda CRF250 <br><br> 560 800 рублей </h2>
+                </div>
+                <nav class="c">
+                    <h1>
+                        <a href=""> Перейти </a>
+                    </h1>
+                </nav>
+            </div>
+
+
+            <div class="card">
+                <div class="card-item">
+                    <div class="card-item-text">
+                        <div class="moto">
+                            <a href=""><img src="assets2/img2/moto6.jpeg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="second_text">
+                    <h2> 1998 Suzuki RM 85<br><br> 330 650 рублей </h2>
+                </div>
+                <nav class="c">
+                    <h1>
+                        <a href=""> Перейти </a>
+                    </h1>
+                </nav>
+            </div>
+
+            <script>
+                const cards = document.querySelectorAll('.card');
+
+                for (let i = 0; i < cards.length; i++) {
+                    const card = cards[i];
+                    card.addEventListener('mousemove', startRotate);
+                    card.addEventListener('mouseout', stopRotate);
+                }
+
+                function startRotate(event) {
+                    const cardItem = this.querySelector('.card-item');
+                    const halfHeight = cardItem.offsetHeight / 2;
+                    const halfWidth = cardItem.offsetWidth / 2;
+                    cardItem.style.transform = 'rotateX(' + -(event.offsetY -
+                        halfHeight) / 15 + 'deg) rotateY(' + (event.offsetX -
+                            halfWidth) / 15 + 'deg)';
+                }
+
+                function stopRotate(event) {
+                    const cardItem = this.querySelector('.card-item');
+                    cardItem.style.transform = 'rotate(0)';
+                }
+            </script>
+        </section>
+    </main>
+</body>
+<footer>
+    <div class="logo1">
+        <img src="assets/img/logo.png"><br>
+
+    </div>
+    <div class="fot">
+        <img src="assets/img/fot1.png">
+        <img src="assets/img/fot2.png">
+        <img src="assets/img/fot3.png">
+        <img src="assets/img/fot4.png">
+
+    </div>
+</footer>
+
+</html>
